@@ -1,0 +1,564 @@
+
+/* Estiliza tudo */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+}
+
+/* Fundo */
+
+body{
+    height: 100vh;
+    background-image: url("../img/fundo.PNG");
+    background-size: cover;
+    animation: animar 90s linear infinite alternate;
+    transition: 5s;
+}
+
+@keyframes animar{
+    0% { background-position: left top; }
+    50% { background-position: center center; }
+    100% { background-position: right bottom; }
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+    
+}
+
+.flex{
+    display: flex;
+}
+
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: black;
+    border: 1px solid #191A23;
+    filter: drop-shadow(1px 0px 0px rgba(33, 90, 109, 0.8));
+    border-radius: 14px;
+    color: #DFECE6;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: .2s;
+}
+
+.btn-contato button:hover, form .btn-enviar input:hover{
+    box-shadow: 4px 0px 4px #085A75;
+    transform: scale(1.05);
+}
+
+h2.titulo {
+    color: #DFECE6;
+    font-size: 38px;
+    text-align: center;
+    font-family: "Anonymous Pro", serif;
+    font-style: normal;
+}
+
+h2.titulo span{
+    color: #3CA2A2;
+}
+
+h3.titulo {
+    color: #DFECE6;
+    font-size: 17px;
+    font-family: "Anonymous Pro", serif;
+    font-style: normal;
+}
+
+
+/* Estilo do cabeçalho */
+
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+header a{
+    color: #2D2D29;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: #DFECE6;
+    transform: scale(1.05);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+
+header .logo{
+    font-family: "Anonymous Pro", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.menu-desktop{
+    font-family: "Space Grotesk", serif;
+    font-optical-sizing: auto;
+    font-weight: 20px;
+    font-style: normal;
+}
+
+/* Estilo do topo do site */
+
+section.topo-do-site{
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1{
+    color: #DFECE6;
+    font-size: 50px;
+    line-height: 40px;
+    font-family: "Anonymous Pro", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.topo-do-site .txt-topo-site p{
+    color: #DFECE6;
+    margin: 40px 0;
+    font-family: "Space Grotesk", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+/* ESTILO DAS ESPECIALIDADES */
+
+section.especialidades{
+    padding: 30px 4%;
+
+}
+
+section.especialidades .flex{
+    gap: 70px;
+    box-shadow: 1px 1px 1px rgba(33, 90, 109, 0.8);
+    border-radius: 45px;
+}
+.especialidades .especialidades-box{
+    color: #DFECE6;
+    padding: 40px;
+    
+}
+
+.especialidades .especialidades-box2 {
+    color: #DFECE6;
+    padding: 40px;
+    position: relative; /* Necessário para os pseudo-elementos */
+}
+
+/* Criando a linha branca no centro */
+.especialidades .especialidades-box2::before {
+    content: "";
+    position: absolute;
+    top: 15%; /* Ajusta o espaçamento superior */
+    bottom: 15%; /* Ajusta o espaçamento inferior */
+    left: 0;
+    width: 1px; /* Espessura da linha */
+    background-color: #DFECE6;
+}
+
+/* Criando a linha branca no centro da direita */
+.especialidades .especialidades-box2::after {
+    content: "";
+    position: absolute;
+    top: 15%;
+    bottom: 15%;
+    right: 0;
+    width: 1px;
+    background-color: #DFECE6;
+}
+
+
+.especialidades .especialidades-box h3{
+    font-size: 28px;
+    color: #92C7A3;
+    margin: 15px 0px;
+    font-family: "Anonymous Pro", serif;
+    font-style: normal;
+}
+
+.especialidades .especialidades-box2 h3{
+    font-size: 28px;
+    color: #92C7A3;
+    margin: 15px 0px;
+    font-family: "Anonymous Pro", serif;
+    font-style: normal;
+    
+}
+
+.especialidades .especialidades-box p{
+    font-family: "Space Grotesk", serif;
+    font-optical-sizing: auto;
+}
+
+.especialidades .especialidades-box2 p{
+    font-family: "Space Grotesk", serif;
+    font-optical-sizing: auto;
+}
+
+/* SOBRE MIM */
+
+section.sobre{ 
+    padding: 40px 4%;
+    
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+    box-shadow: 1px 1px 1px rgba(33, 90, 109, 0.8);
+    border-radius: 45px;
+    justify-content: center;
+}
+
+.sobre img{
+    width: 340px;
+}
+
+.sobre .txt-sobre{
+    box-sizing: border-box;
+    max-width: 600px;
+    background: #191A23;
+    border: 1px solid rgba(33, 90, 109, 0.63);
+    border-radius: 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.sobre .txt-sobre p{
+    text-align: center;
+    color: #DFECE6;
+    padding: 40px;
+    font-size: 17px;
+    font-family: "Anonymous Pro", serif;
+    font-style: normal;
+}
+
+.txt-sobre::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 24px;
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-right: 40px solid #1a1d25; /* Cor igual à da caixa */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .txt-sobre::before {
+        left: 50%;
+        top: -10px;
+        transform: translateX(-50%) rotate(90deg);
+        border-right: none;
+        border-bottom: 20px solid #1a1d25;
+        border-top: 10px solid transparent;
+        border-left: 10px solid transparent;
+    }
+}
+
+
+
+/* Estilo do portfolio */
+
+section.portfolio{
+    padding: 80px 4%;
+}
+
+section.portfolio .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-port{
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    position: relative;
+    border-radius: 40px;
+}
+
+.img-port:hover{
+    background-position: 100% 100%;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000062;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600px;
+    color: aliceblue;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+/* Estilo do formulario */
+
+section.formulario{
+    display: flex;
+    justify-content: center;  /* Centraliza na horizontal */
+    align-items: center;      /* Centraliza na vertical */
+    height: 100vh;            /* Faz a seção ocupar toda a altura da tela */
+}
+
+form{
+    width: 100%; /* Faz o form ocupar a largura total do `.flex` */
+    max-width: 500px; /* Evita que fique muito grande */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Mantém espaçamento entre os inputs */
+    margin-top: 20px; /* Ajuste conforme necessário */
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 1px solid #000000;
+    border-radius: 14px;
+    outline: 0;
+    padding: 20px 15px;
+    color: #000000;
+    font-size: 18px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+}
+
+form textarea{
+    resize: none;
+    height: 214px;
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+}
+
+form .btn-enviar input{
+    color: #DFECE6;
+    background-color: #000000;
+    background: rgba(25, 26, 35, 0.02);
+    box-shadow: 0px 1px 0px #DFECE6, inset 0px 1px 0px #DFECE6;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: .2s;
+    margin-top: 20px;
+}
+
+section.formulario .flex{
+    display: flex;
+    flex-direction: column; /* Mantém os elementos empilhados */
+    align-items: center; /* Centraliza os inputs */
+    justify-content: center;
+    background: rgba(45, 45, 41, 0.034); /* Ajuste a transparência conforme necessário */
+    box-shadow: 0px 4px 4px #215A6D;
+    border-radius: 45px;
+    width: 600px;
+    padding: 40px; /* Adiciona espaçamento interno */
+}
+
+/* ESTILO DO RODAPE */
+
+footer {
+    max-width: 1300px; /* Define uma largura máxima */
+    margin: 0 auto; /* Centraliza o rodapé */
+    padding: 40px 4%;
+    background: rgba(25, 26, 35, 0.048);
+    box-shadow: inset 0px 1px 0px #215A6D;
+    border-radius: 45px 45px 0px 0px;
+}
+
+
+/* Alinha os elementos horizontalmente */
+footer .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Nome no footer */
+footer .logo-footer h3 {
+    font-size: 20px;
+    color: white;
+    margin: 0;
+}
+
+/* Botões das redes sociais */
+footer .btn-social {
+    display: flex;
+    gap: 15px;
+}
+
+footer .btn-social button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+footer .btn-social button:hover {
+    background: white;
+    color: black;
+}
+
+/* Contato no footer */
+footer .contato-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .contato-footer p {
+    padding: 5px 10px;
+    background: #228F8F;
+    border-radius: 7px;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Estiliza o e-mail */
+footer p {
+    color: #DFECE6;
+    font-size: 14px;
+}
+
+footer p a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
+
+.borda{
+    padding: 20px;
+    border-bottom: 2px solid #DFECE6;
+}
+
+@media screen and (max-width: 1020px){
+    /* Classes gerais */
+    .flex{
+        flex-direction: column;
+    }    
+
+    /* Cabeçalho */
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+
+    /* Topo do site */
+
+    section.topo-do-site .flex{
+        gap: 40px;
+    }
+
+    .topo-do-site .img-topo-site img{
+        width: 100%;
+    }
+
+    /* ESTILO DAS ESPECIALIDADES */
+    section.especialidades{
+        padding: 30px 8%;
+    }
+
+    /* Estilo do portfolio */
+    section.portfolio{
+        padding: 80px 8%;
+    }
+    .img-port{
+        width: 100%;
+    }
+
+    section.portfolio .flex{
+        gap: 60px;
+    }
+
+    /* Estilo do formulario */
+
+    section.formulario .flex{
+        width: 370px;
+    }
+
+    /* ESTILO DO RODAPE */
+
+    footer .flex {
+        flex-direction: column;
+    }
+
+    footer {
+        margin-top: 70px;
+   }
+   footer .btn-social button {
+        margin-top: 16px;
+    }
+}
